@@ -1,0 +1,26 @@
+<section class="my-4">
+    <h2>Wish List</h2>
+    <div class="row g-4">
+        <div class="col-md-2" *ngFor="let item of Products">
+            <div class="product position-relative p-2">
+                <i class="fa-regular fa-heart heart" *ngIf="!wishListData.includes(item._id)" (click)="AddFav(item._id)" id=""></i>
+                <i class="fa-solid fa-heart heart" *ngIf="wishListData.includes(item._id)" (click)="RemoveFav(item._id)"></i>
+
+<div class="p-2 cursor-pointer"  [routerLink]="['/details' , item._id]"> 
+      <img [src]="item.imageCover" class="w-100" [alt]="item.title">
+    <h3 class="h6">{{item.category.name | buy}}</h3>
+    <h4 class="h6">{{item.title | termtext:2}}</h4>
+        <span  class="product-price">{{item.price}} EGP</span>
+        <div class="d-flex align-items-center">
+            <span class="text-muted">{{item.ratingsAverage}}</span>
+            <i [class.rating-color]="item.ratingsAverage >= num" *ngFor="let num of [1,2,3,4,5]" class="fas fa-star"></i>
+        </div>
+</div>         
+<button (click)="addCart(item._id , btnAdd)" #btnAdd  class="btn-main w-100"> + Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

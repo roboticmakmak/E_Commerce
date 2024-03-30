@@ -1,0 +1,45 @@
+.search-section {
+    background-color: #f8f9fa; /* Add background color */
+    padding: 10px; /* Add padding for spacing */
+}
+
+.search-bar-container {
+    position: relative;
+}
+
+.search-bar {
+    width: 500px; /* Adjust width as needed */
+    max-width: 100%; /* Ensure it doesn't exceed parent width */
+    padding: 8px 16px; /* Adjust padding as needed */
+    border-radius: 20px; /* Adjust border radius as needed */
+    border: 1px solid #ced4da; /* Adjust border color as needed */
+    outline: none; /* Remove outline */
+    transition: border-color 0.3s ease;
+}
+
+.search-bar:focus {
+    border-color: #007bff; /* Change border color on focus */
+}
+
+.search-btn {
+    position: absolute;
+    top: 50%;
+    right: 16px; 
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.search-btn i {
+    color: #11bd11;
+}
+.product-price {
+    font-size: 18px;
+    font-weight: bold; 
+    color: #11bd11;
+}
+.heart{
+    color: red;
+}
